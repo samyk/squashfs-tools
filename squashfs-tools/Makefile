@@ -38,7 +38,7 @@ XZ_SUPPORT = 1
 # installation prefix.
 #
 LZO_SUPPORT = 1
-LZO_DIR = /opt/local
+LZO_DIR = /usr/local
 
 
 ########### Building LZ4 support #############
@@ -107,7 +107,7 @@ XATTR_DEFAULT = 1
 #        End of BUILD options section         #
 ###############################################
 
-INCLUDEDIR = -I. -I/opt/local/include
+INCLUDEDIR = -I. -I/usr/local/include
 INSTALL_DIR = /usr/local/bin
 
 MKSQUASHFS_OBJS = mksquashfs.o read_fs.o action.o swap.o pseudo.o compressor.o \
