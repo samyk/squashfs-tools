@@ -107,7 +107,7 @@ XATTR_DEFAULT = 1
 #        End of BUILD options section         #
 ###############################################
 
-INCLUDEDIR = -I. -I/usr/local/include
+INCLUDEDIR = -I. -I/usr/local/include -I/opt/local/include
 INSTALL_DIR = /usr/local/bin
 
 MKSQUASHFS_OBJS = mksquashfs.o read_fs.o action.o swap.o pseudo.o compressor.o \
@@ -161,7 +161,7 @@ ifeq ($(LZO_SUPPORT),1)
 CFLAGS += -DLZO_SUPPORT
 ifdef LZO_DIR
 INCLUDEDIR += -I$(LZO_DIR)/include
-LZO_LIBDIR = -L$(LZO_DIR)/lib
+LZO_LIBDIR = -L$(LZO_DIR)/lib -L/opt/local/lib
 endif
 MKSQUASHFS_OBJS += lzo_wrapper.o
 UNSQUASHFS_OBJS += lzo_wrapper.o
